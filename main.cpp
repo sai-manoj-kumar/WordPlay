@@ -1,61 +1,36 @@
 /*
  * File:   main.cpp
- * Author: Sai Manoj Kumar Yadlapati
+ * Author: Y. Sai Manoj Kumar
  *
  * Created on September 18, 2011, 3:26 PM
  */
 
 
-#include "GameModule.h"
-#include "Module.h"
+#include "game.h"
 
 /* 
  *
- * 
  */
+
 
 
 
 int main(int argc, char** argv) {
 
-    //    Object for the class GameModule is created.
-    GameModule g;
+    //    Object for the class Game is created.
+    Game g;
 
+    g.initialize();
 
-    Module* gameMod = new GameModule;
-    Module* oldMod = gameMod;
+    do {
+        g.play();
+    } while (g.callPlayAgain());
 
-    gameMod->Initialize();
+    g.shutdown();
 
-    while (true) {
-
-        if ((gameMod = gameMod -> Execute()) != oldMod) {
-            lastMod = oldMod;
-            lastMod->Shutdown();
-            gameMod->Initialize();
-        }
-    }
-
-
-
-
-
-
-
-
-    //    g.Initialize();
-    //
-    //    do {
-    //        g.Play();
-    //        //    } while (false);
-    //    } while (g.callPlayAgain());
-    //
-    //    
-    //    g.Close();
-    //
-
-    
 
     return 0;
 
+
 }
+
