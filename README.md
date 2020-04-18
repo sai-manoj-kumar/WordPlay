@@ -1,1 +1,3 @@
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=koder&url=https://github.com/saimanoj/WordPlay&title=WordPlay&language=en_GB&tags=github&category=software) 
+# Wordplay
+
+A game in which the computer bot selects a word at random from its little dictionary. The aim of the player is to guess the word in minimum number of wrong guesses.
